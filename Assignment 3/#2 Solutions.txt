@@ -1,0 +1,18 @@
+#Answer 1
+
+ SELECT RTrim(First_name) AS First_Name_RTrimmed
+ FROM worker
+
+
+
+# Answer 2
+
+ SELECT COUNT(DISTINCT DEPARTMENT) AS Unique_Department_len
+ FROM worker
+
+
+#Answer 3
+
+SELECT TOP 1 salary 
+FROM ( SELECT DISTINCT TOP 5 salary FROM worker ORDER BY salary DESC) AS temp 
+ORDER BY salary DESC
