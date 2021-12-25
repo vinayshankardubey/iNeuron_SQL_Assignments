@@ -1,0 +1,18 @@
+# Answer 1
+
+SELECT REPLACE(first_name, 'a', 'A')
+FROM worker
+
+
+# Answer 2
+
+SELECT * 
+FROM worker 
+ORDER BY trim(DEPARTMENT) DESC, Trim(first_name)
+
+
+# Answer 3
+
+SELECT Top 1 CONCAT(first_name,' ',last_name) as Name
+FROM worker 
+Order By Salary
